@@ -1,0 +1,62 @@
+/* H1 & H2 styling */
+h1::before {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  margin-right: 10px;
+  content: "";
+  vertical-align: middle;
+  background-color: black;
+}
+
+h1:after {
+  content: " ★";
+  color: orange;
+}
+
+h2:not("title") {
+  color: skyblue;
+}
+
+/* Ul & li styling */
+li {
+  padding: 5px 2px;
+}
+
+li:nth-child(odd) {
+  background-color: silver;
+  color: blue;
+  margin: 0 auto;
+}
+
+li:nth-child(even) {
+  background-color: skyblue;
+  color: black;
+  margin: 0 auto;
+}
+
+li:first-child {
+  color: crimson;
+}
+li:last-child {
+  color: darkviolet;
+}
+
+/* Button styling */
+
+button:hover {
+  transform: scale(1.05);
+  padding: 0px 25px;
+}
+
+/* Section styling */
+
+section:before {
+  border: 2px solid black;
+}
+
+section:after {
+  border: 2px solid black;
+}
+/* Lag en fremhevet seksjon med: En dekorativ ::before og ::after som lager en
+"boks" rundt teksten. */
