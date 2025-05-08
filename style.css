@@ -18,7 +18,7 @@ h2:not("title") {
   color: skyblue;
 }
 
-/* Ul & li styling */
+/* Ul & li styling with selectors */
 li {
   padding: 5px 2px;
 }
@@ -42,6 +42,12 @@ li:last-child {
   color: darkviolet;
 }
 
+li::after {
+  content: " ★";
+  color: orange;
+  font-size: 25px;
+}
+
 /* Button styling */
 
 button:hover {
@@ -51,12 +57,22 @@ button:hover {
 
 /* Section styling */
 
-section:before {
-  border: 2px solid black;
+.highlighted {
+  padding: 2px;
 }
+.highlighted::before {
+  content: "[";
+}
+.highlighted::after {
+  content: "]";
+}
+/*  highlighted div selector child styling */
+.highlighted div:last-child {
+  background-color: rgb(195, 189, 189);
+  padding: 10px;
+}
+/* TextArea styling */
 
-section:after {
+textarea:hover {
   border: 2px solid black;
 }
-/* Lag en fremhevet seksjon med: En dekorativ ::before og ::after som lager en
-"boks" rundt teksten. */
